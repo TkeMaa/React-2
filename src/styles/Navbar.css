@@ -1,0 +1,144 @@
+.navbar{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(168, 171, 160);
+    /*background-image: linear-gradient(rgba(110, 143, 102, 0.812),rgba(178, 221, 167, 0.812));
+    border-bottom: 3px #f5eeba solid;*/
+    box-shadow: 3px ;
+    /*rgba(174, 196, 169, 0.812)*/
+    position: fixed;
+    opacity: 1;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 10px;
+
+    white-space: nowrap;
+    box-sizing: border-box;
+
+    flex-wrap: wrap-reverse;
+}
+
+.navbar .leftSide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*width: 70px;*/
+    height: 100%;
+}
+
+.navbar .leftSide img{
+    margin: 0;
+    padding: 0;
+    width: 70px;    
+}
+
+.navbar .rightSide ul li{
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.navbar .rightSide ul li a{
+    text-decoration: none;
+    color: white;
+    /*font-weight: bold;*/
+    font-size: 18px;
+}
+
+.navbar .rightSide ul li a:hover{
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in;
+}
+
+.navbar #open img {
+    display: none;
+}
+
+.navbar #close img {
+    display: inherit;
+}
+
+.navbar #open .burgerMenu ul {
+    margin: 0px;
+    padding: 20px;
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar #open .burgerMenu ul li {
+    list-style: circle;
+    color: rgb(55, 74, 58);
+    /*background-color: aqua;*/
+}
+
+.navbar #open .burgerMenu ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    /*font-weight: bold;*/
+    font-size: 18px;
+}
+
+.navbar #open .burgerMenu ul li a:hover{
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar #close .burgerMenu {
+    display: none;
+}
+
+.burger{
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 200px) {
+    .navbar .rightSide{
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    } 
+}
+
+@media only screen and (min-width: 650px) {
+    .navbar .rightSide{
+        display: block;
+    }
+
+    /*.navbar .burgerMenu {
+        display: none;
+    }*/
+
+    .navbar #open .burgerMenu {
+        display: none;
+    }
+
+    .navbar #open img {
+        display: block;
+    }
+
+    .burger {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    .navbar .rightSide{
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    } 
+
+    .navbar .leftSide img{
+        display: none;
+    }
+}

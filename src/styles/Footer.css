@@ -1,0 +1,40 @@
+.footer{
+    background-color: #121619;
+    border-top: 3px rgba(161, 215, 148, 0.812) solid;
+    color: white;
+    
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    overflow-y: auto;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+.footer img{
+    margin: 0;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
+
+.footer img:hover{
+    background-color: rgb(24, 30, 32);
+}
+
+@media only screen and (max-width: 550px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
