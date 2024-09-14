@@ -22,6 +22,7 @@ function Navbar() {
                         <li><Link to="/menu">PONUDA</Link></li>
                         <li><Link to="/about">O NAMA</Link></li>
                         <li><Link to="/contact">KONTAKT</Link></li>
+                        <li><Link to="/cart">KORPA</Link></li>
                     </ul>
                 </div>
             </div>
@@ -31,6 +32,7 @@ function Navbar() {
                     <li><Link to="/menu"> PONUDA </Link></li>
                     <li><Link to="/about"> O NAMA </Link></li>
                     <li><Link to="/contact"> KONTAKT </Link></li>
+                    <li><Link to="/cart"> KORPA </Link></li>
                 </ul>
             </div>
             <div className="burger" onClick={toggleBurger}>

@@ -1,0 +1,40 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupContent {
+  background-color: rgb(195, 187, 187);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 10px;
+}
+
+.successMessage {
+  margin-top: 20px;
+  color: green;
+  font-size: 1.2em;
+}
+
+.popupContent button {
+  border: none;
+  border-radius: 5px;
+  background-color: #252d32;
+  color: white;
+  cursor: pointer;
+  height: 30px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+

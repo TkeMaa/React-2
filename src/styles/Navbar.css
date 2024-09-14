@@ -42,6 +42,7 @@
 }
 
 .navbar .rightSide ul li a{
+    padding: 2px;
     text-decoration: none;
     color: white;
     /*font-weight: bold;*/
@@ -70,6 +71,7 @@
 }
 
 .navbar #open .burgerMenu ul li {
+    padding: 0;
     list-style: circle;
     color: rgb(55, 74, 58);
     /*background-color: aqua;*/
@@ -79,7 +81,7 @@
     text-decoration: none;
     color: rgb(255, 255, 255);
     /*font-weight: bold;*/
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .navbar #open .burgerMenu ul li a:hover{
@@ -107,7 +109,7 @@
     } 
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 700px) {
     .navbar .rightSide{
         display: block;
     }
