@@ -33,10 +33,12 @@ function Kontakt() {
       validationErrors.lastName = "Prezime je obavezno";
     }
     
-    if (!formData.firstName.trim()) {
+    if (!formData.email.trim()) {
       validationErrors.email = "Email je obavezan";
-    } else if (!/\S+@\S+\S+/.test(formData.email)) {
+    } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
       validationErrors.email = "Email neispravan";
+    } else {
+      validationErrors.email = "";
     }
 
     if (Object.keys(validationErrors).length > 0) {
@@ -47,17 +49,15 @@ function Kontakt() {
         Ime: ${formData.firstName}
         Prezime: ${formData.lastName}
         Email: ${formData.email}
-        Poruka: ${formData.message}
       `);
       /* Resetuj podatke */
-      /* 
       setFormData({
         firstName: '',
         lastName: '',
         email: '',
         message: ''
       });
-      */
+      window.location.reload();
     } 
   }
 
