@@ -29,10 +29,10 @@
     width: 150px;
     position: fixed;
     z-index: 1;
-    background-color: #81b488;
+    background-color: #c59cb9;
     border-radius: 0px 0px 40px 0px;  
-    border-right: 1px solid #437e62;
-    border-bottom: 1px solid #437e62;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 .hamburgerMenu ul{
@@ -66,11 +66,11 @@
 }
 
 #openIcon{
-    color: #121619;
+    color: #f7e69e;
 }
 
 .active{
-    color: #121619!important;
+    color: #f7e69e!important;
 }
 
 .navbar .leftSide{

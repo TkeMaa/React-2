@@ -3,6 +3,7 @@ import { useCart } from "../helpers/CartContext";
 import CheckoutPopup from '../components/CheckoutPopup';
 import "../styles/Cart.css";
 import { Height } from '@mui/icons-material';
+import { textAlign } from '@mui/system';
 
 function Cart() {
 
@@ -33,7 +34,7 @@ function Cart() {
 
   return (
     <div className="cart">
-      <h1>Vaša korpa</h1>
+      <h1 style={{textAlign:"center"}}>Vaša korpa</h1>
       {cart.length === 0 ? (
         <p>Korpa je prazna</p>
       ) : (
@@ -42,7 +43,7 @@ function Cart() {
             <div key={index} style={{
                 margin: `5px`,
                 padding: `5px`,
-                backgroundColor : `rgb(200, 237, 204)`, 
+                backgroundColor : `#f3e5ab`, 
                 borderRadius: `15px`,
                 boxShadow: `0px 3px 15px rgba(0, 0, 0, 0.2)`,
                 textAlign: `center`
