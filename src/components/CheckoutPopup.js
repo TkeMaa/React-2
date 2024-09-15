@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import "../styles/CheckoutPopup.css";
 
 function CheckoutPopup({ onClose, onSubmit }) {
+
   const [name, setName] = useState('');
+  
   const [address, setAddress] = useState('');
 
   const handleSubmit = () => {

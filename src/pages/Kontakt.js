@@ -49,13 +49,15 @@ function Kontakt() {
         Email: ${formData.email}
         Poruka: ${formData.message}
       `);
-      // Resetuj formu
-      // setFormData({
-      //   firstName: '',
-      //   lastName: '',
-      //   email: '',
-      //   message: ''
-      // });
+      /* Resetuj podatke */
+      /* 
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+      });
+      */
     } 
   }
 

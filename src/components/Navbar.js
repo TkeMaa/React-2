@@ -4,8 +4,7 @@ import {NavLink, Link} from "react-router-dom";
 import "../styles/Navbar.css";
 
 function Navbar() {
-    /*Svaki put kada promenimo stanje, sajt se ponovo renderuje,
-    to ne moze sa obicnim promenljivama*/
+    
     const [openBurger, setOpenBurger] = useState(false);
 
     const toggleBurger = () => {
@@ -16,7 +15,7 @@ function Navbar() {
         <div className="navbar">
             <div className="leftSide" id={openBurger ? "open": "close"}>
                 <Link to="/" ><img src={logo} alt="logo" /></Link>
-                <div className="burgerMenu">
+                <div className="hamburgerMenu" id={openBurger ? "open": "close"}>
                     <ul>
                         <li><NavLink to="/" className={({isActive}) => (isActive?"active":"")}>POČETNA</NavLink></li>
                         <li><NavLink to="/menu">PONUDA</NavLink></li>
@@ -24,7 +23,7 @@ function Navbar() {
                         <li><NavLink to="/contact">KONTAKT</NavLink></li>
                         <li><NavLink to="/cart">KORPA</NavLink></li>
                     </ul>
-                </div>
+            </div>
             </div>
             <div className="rightSide">
                 <ul>

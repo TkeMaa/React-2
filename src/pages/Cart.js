@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { useCart } from "../helpers/CartContext";
 import CheckoutPopup from '../components/CheckoutPopup';
 import "../styles/Cart.css";
+import { Height } from '@mui/icons-material';
 
 function Cart() {
-  const { cart, removeFromCart, clearCart } = useCart(); // Pristup stavkama u korpi, uklanjanju i pražnjenju korpe
-  const [showPopup, setShowPopup] = useState(false); // Za prikazivanje popup-a
+
+  const { cart, removeFromCart, clearCart } = useCart(); // Pristup stavkama u korpi, uklanjanju i pražnjenju korpe 
+  const [showPopup, setShowPopup] = useState(false); // Za prikazivanje popup-a 
   const [successMessage, setSuccessMessage] = useState(''); // Za prikaz uspešne kupovine
 
   const handleRemoveFromCart = (itemToRemove) => {

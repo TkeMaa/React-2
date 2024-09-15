@@ -1,9 +1,6 @@
 import React from 'react'
 import "../styles/About.css";
 import pastry from "../assets/pastry.jpg";
-/*
-<div className="img" style={{ backgroundImage:`url(${pastry})` }} > </div>
-*/
 
 function About() {
   return (

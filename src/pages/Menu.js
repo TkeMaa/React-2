@@ -1,4 +1,3 @@
-import  { useState } from 'react';
 import React from 'react'
 import { MenuList } from "../helpers/MenuList";
 import MenuItem from "../components/MenuItem";
@@ -6,14 +5,6 @@ import "../styles/Menu.css"
 import { useCart } from "../helpers/CartContext";
 
 function Menu() {
-
-  /*const [cart, setCart] = useState([]);
-
-  const handleAddToCart = (item) => {
-    setCart([...cart, item]);
-    alert(`Dodato u korpu: ${item.name}`);
-    // Možete dodati više logike za upravljanje korpom ako je potrebno
-  };*/
 
   const { addToCart } = useCart();
 
