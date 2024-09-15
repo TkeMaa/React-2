@@ -8,12 +8,17 @@ export const useCart = () => {
 };
 
 export const CartProvider = ({ children }) => {
+  
   const [cart, setCart] = useState([]);
+
+  const [price, setPrice] = useState(0);
 
   // Funkcija za dodavanje u korpu
   const addToCart = (item) => {
     //setCart([...cart, { ...item, id: uuidv4() }]); // Dodaj jedinstveni ID stavci
     setCart((prevCart) => [...prevCart, {...item, id: uuidv4() }]);
+    setPrice((prevPrice) => prevPrice + item.price);
+    console.log(price);
   };
 
   // Funkcija za uklanjanje iz korpe
@@ -21,15 +26,19 @@ export const CartProvider = ({ children }) => {
     setCart((prevCart) =>
       prevCart.filter((item) => item.id !== itemToRemove.id)
     );
+    setPrice((prevPrice) => prevPrice - itemToRemove.price)
+    console.log(price);
   };
 
   // Funkcija za čišćenje korpe
   const clearCart = () => {
     setCart([]); // Pražnjenje korpe
+    setPrice(0);
+    console.log(price);
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+    <CartContext.Provider value={{ price, cart, addToCart, removeFromCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );

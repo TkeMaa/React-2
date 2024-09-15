@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../styles/CheckoutPopup.css";
 
-function CheckoutPopup({ onClose, onSubmit }) {
+function CheckoutPopup({ onClose, onSubmit, price }) {
 
   const [name, setName] = useState('');
   
@@ -31,6 +31,7 @@ function CheckoutPopup({ onClose, onSubmit }) {
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
+        <p>Cena: {price} RSD</p>
         <button onClick={handleSubmit}>Potvrdi kupovinu</button>
         <button onClick={onClose}>Otkaži</button>
       </div>

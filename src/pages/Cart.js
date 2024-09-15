@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { useCart } from "../helpers/CartContext";
 import CheckoutPopup from '../components/CheckoutPopup';
 import "../styles/Cart.css";
-import { Height } from '@mui/icons-material';
-import { textAlign } from '@mui/system';
 
 function Cart() {
 
-  const { cart, removeFromCart, clearCart } = useCart(); // Pristup stavkama u korpi, uklanjanju i pražnjenju korpe 
+  const { price, cart, removeFromCart, clearCart } = useCart(); // Pristup stavkama u korpi, uklanjanju i pražnjenju korpe 
   const [showPopup, setShowPopup] = useState(false); // Za prikazivanje popup-a 
   const [successMessage, setSuccessMessage] = useState(''); // Za prikaz uspešne kupovine
 
@@ -39,6 +37,7 @@ function Cart() {
         <p>Korpa je prazna</p>
       ) : (
         <div>
+          <p>Ukupna cena: {price} RSD</p>
           {cart.map((item, index) => (
             <div key={index} style={{
                 margin: `5px`,
@@ -49,7 +48,7 @@ function Cart() {
                 textAlign: `center`
               }}>
               <h2>{item.name}</h2>
-              <p>{item.price} RSD</p>
+              <p>Cena: {item.price} RSD</p>
               <button className="ukloni" onClick={() => handleRemoveFromCart(item)}>
                 Ukloni iz korpe
               </button>
@@ -62,6 +61,7 @@ function Cart() {
         <CheckoutPopup
           onClose={handleCancelPurchase}
           onSubmit={handleSubmit}
+          price={price}
         />
       )}
       {successMessage && <div className="successMessage">{successMessage}</div>}
