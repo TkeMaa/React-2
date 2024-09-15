@@ -25,6 +25,7 @@ function Kontakt() {
     e.preventDefault();
 
     const validationErrors = {};
+
     if (!formData.firstName.trim()) {
       validationErrors.firstName = "Ime je obavezno";
     }
@@ -35,11 +36,9 @@ function Kontakt() {
     
     if (!formData.email.trim()) {
       validationErrors.email = "Email je obavezan";
-    } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+    } else if (!/^[a-z0-9.]+[a-z0-9]@([a-z]+.[a-z]+){1,}/.test(formData.email)) {
       validationErrors.email = "Email neispravan";
-    } else {
-      validationErrors.email = "";
-    }
+    } 
 
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);

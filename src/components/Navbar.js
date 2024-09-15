@@ -34,7 +34,7 @@ function Navbar() {
                     <li><NavLink to="/cart"> KORPA </NavLink></li>
                 </ul>
             </div>
-            <div className="burger" id={openBurger ? "openIcon" : "closeIcon"} onClick={toggleBurger}>
+            <div className="burger" id={openBurger ? "openIcon" : "closeIcon"} onClick={toggleBurger} style={{userSelect:"none"}}>
                 &#9776; 
             </div>
         </div>
