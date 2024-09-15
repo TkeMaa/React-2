@@ -47,76 +47,17 @@ function Kontakt() {
         Ime: ${formData.firstName}
         Prezime: ${formData.lastName}
         Email: ${formData.email}
-        Napomena: ${formData.message}
-      `);
-      // Resetuj formu
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: ''
-      });
-    } 
-  }
-
-  /*
-  const [errors, setErrors] = useState({});
-
-  const validate = () => {
-    let formErrors = {};
-
-    if (!formData.firstName.trim()) {
-      formErrors.firstName = 'Ime je obavezno';
-    }
-    if (!formData.lastName.trim()) {
-      formErrors.lastName = 'Prezime je obavezno';
-    }
-    if (!formData.email) {
-      formErrors.email = 'Email je obavezan';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      formErrors.email = 'Email nije validan';
-    }
-
-    return formErrors;
-  };
-
-  // Funkcija za rukovanje promenama u input poljima
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  // Funkcija za slanje forme
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formErrors = validate();
-    
-    // Ako postoje greške, postavi ih u state i ne šalji formu
-    if (Object.keys(formErrors).length > 0) {
-      setErrors(formErrors);
-    } else {
-      setErrors({});
-      // Prikaži pop-up sa prikupljenim podacima
-      window.alert(`
-        Ime: ${formData.firstName}
-        Prezime: ${formData.lastName}
-        Email: ${formData.email}
         Poruka: ${formData.message}
       `);
-      
-      // Resetuj formu nakon slanja
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: ''
-      });
-    }
-  };
-  */
+      // Resetuj formu
+      // setFormData({
+      //   firstName: '',
+      //   lastName: '',
+      //   email: '',
+      //   message: ''
+      // });
+    } 
+  }
 
   return (
     <div className="contact">

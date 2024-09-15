@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import logo from "../assets/logo.png";
-import {Link} from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -15,27 +15,27 @@ function Navbar() {
     return (
         <div className="navbar">
             <div className="leftSide" id={openBurger ? "open": "close"}>
-                <Link to="/"><img src={logo} alt="logo" /></Link>
+                <Link to="/" ><img src={logo} alt="logo" /></Link>
                 <div className="burgerMenu">
                     <ul>
-                        <li><Link to="/">POČETNA</Link></li>
-                        <li><Link to="/menu">PONUDA</Link></li>
-                        <li><Link to="/about">O NAMA</Link></li>
-                        <li><Link to="/contact">KONTAKT</Link></li>
-                        <li><Link to="/cart">KORPA</Link></li>
+                        <li><NavLink to="/" className={({isActive}) => (isActive?"active":"")}>POČETNA</NavLink></li>
+                        <li><NavLink to="/menu">PONUDA</NavLink></li>
+                        <li><NavLink to="/about">O NAMA</NavLink></li>
+                        <li><NavLink to="/contact">KONTAKT</NavLink></li>
+                        <li><NavLink to="/cart">KORPA</NavLink></li>
                     </ul>
                 </div>
             </div>
             <div className="rightSide">
                 <ul>
-                    <li><Link to="/"> POČETNA </Link></li>
-                    <li><Link to="/menu"> PONUDA </Link></li>
-                    <li><Link to="/about"> O NAMA </Link></li>
-                    <li><Link to="/contact"> KONTAKT </Link></li>
-                    <li><Link to="/cart"> KORPA </Link></li>
+                    <li><NavLink to="/"> POČETNA </NavLink></li>
+                    <li><NavLink to="/menu"> PONUDA </NavLink></li>
+                    <li><NavLink to="/about"> O NAMA </NavLink></li>
+                    <li><NavLink to="/contact"> KONTAKT </NavLink></li>
+                    <li><NavLink to="/cart"> KORPA </NavLink></li>
                 </ul>
             </div>
-            <div className="burger" onClick={toggleBurger}>
+            <div className="burger" id={openBurger ? "openIcon" : "closeIcon"} onClick={toggleBurger}>
                 &#9776; 
             </div>
         </div>

@@ -1,5 +1,5 @@
 .contact{
-    margin-top: 100px;
+    margin-top: 50px;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -25,7 +25,7 @@
     border-radius: 10px;
     background-color: #ffffff;
     padding: 50px;
-    width: 300px;
+    width: 400px;
     height: auto;
 }
 
@@ -38,7 +38,7 @@
     text-align: left;
     outline: none; 
     border: none;
-    color: #969595;
+    color: #252d32;
 }
 
 .contact form button {
@@ -64,7 +64,7 @@
 }
 
 .contact form textarea {
-    color: #969595;
+    color: #252d32;
     resize: none;
     white-space: pre-wrap;
     overflow-y: auto;
