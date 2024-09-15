@@ -3,6 +3,7 @@
     width: 100%;
 
     overflow-x: hidden;
+    margin-top: 50px;
 
     display: flex;
     flex-direction: row;
