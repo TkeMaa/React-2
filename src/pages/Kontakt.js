@@ -56,7 +56,7 @@ function Kontakt() {
         email: '',
         message: ''
       });
-      window.location.reload();
+      window.location.reload(); // Refresuj ekran, obrisi podatke iz polja na ekranu
     } 
   }
 
